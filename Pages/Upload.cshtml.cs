@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,17 +8,13 @@ using Microsoft.Extensions.Logging;
 
 namespace SearchEngine.Pages
 {
-    public class PrivacyModel : PageModel
+    public class UploadModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<UploadModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public UploadModel(ILogger<UploadModel> logger)
         {
             _logger = logger;
-        }
-
-        public void OnGet()
-        {
         }
     }
 }

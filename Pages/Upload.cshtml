@@ -1,0 +1,16 @@
+@page
+@model UploadModel
+@{
+    ViewData["Title"] = "Upload Documents";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Upload Documents to our database</h1>
+</div>
+
+<form method="post" asp-page="Upload">
+    <div class="form-group">
+        <input type="file" name="uploadedFile" class="form-control" accept=".doc,.docx,.pdf,.ppts,.xls,.xlsxx,.txt,.html,.xml" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>

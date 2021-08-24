@@ -1,10 +1,16 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Search Engine";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the Search Engine</h1>
 </div>
+
+<form method="post" asp-page="Index">
+    <div class="form-group">
+        <input type="text" name="query" class="form-control" placeholder="Enter Search" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

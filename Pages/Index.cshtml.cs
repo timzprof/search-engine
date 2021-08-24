@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using SearchEngine.Models;
 
 namespace SearchEngine.Pages
 {
@@ -17,9 +18,18 @@ namespace SearchEngine.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public IActionResult OnPost([FromForm]string query)    
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
+            return Redirect("/Results?query=" + query);
+        }
+
+        public IActionResult Rediect() {
+            return RedirectToPage("./Results");
         }
     }
 }
